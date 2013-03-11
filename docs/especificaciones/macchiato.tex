@@ -1,0 +1,134 @@
+\documentclass[letter,12pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{textcomp}
+\renewcommand*\familydefault{\sfdefault}
+
+\usepackage[spanish]{babel}
+\usepackage[utf8x]{inputenc}
+
+\usepackage[pdftex]{graphicx}
+\usepackage{pifont}
+\usepackage[
+pdfauthor={Carlos Eduardo Caballero Burgoa},%
+pdftitle={macchiato},%
+colorlinks,%
+citecolor=black,%
+filecolor=black,%
+linkcolor=black,%
+%urlcolor=black
+pdftex]{hyperref}
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\pagestyle{fancy}
+
+% Para la primera página
+\fancypagestyle{plain}{
+\fancyhead[l]{}
+\fancyhead[r]{}
+\fancyhead[c]{}
+\renewcommand{\headrulewidth}{0.5pt}
+\fancyfoot[l]{SCESI \\ Sociedad Científica de Estudiantes de Sistemas e Informática}
+\fancyfoot[c]{}
+\fancyfoot[r]{\thepage/\pageref{LastPage}}
+\renewcommand{\footrulewidth}{0.5pt}}
+
+% Para el resto de páginas
+\lhead{Proyecto Macchiato}
+\chead{}
+\renewcommand{\headrulewidth}{0.4pt}
+\lfoot{SCESI \\ Sociedad Científica de Estudiantes de Sistemas e Informática \\ 
+\url {http://www.scesi.org}}
+\cfoot{}
+\rfoot{\thepage/\pageref{LastPage}}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\title{\bf Proyecto Macchiato}
+\author{Carlos Eduardo Caballero Burgoa}
+
+\begin{document}
+\maketitle
+\begin{center}\url {http://www.scesi.org}\end{center}
+\pagebreak
+
+\tableofcontents
+\pagebreak
+
+\section{Introducción}
+Como parte de las construcciones de software orientado a soluciones primigenias, este documento
+trata los asuntos referentes al desarrollo de un sistema para la reproducción de archivos de audio
+en formato mp3 via online.
+
+\section{Antecedentes}
+En estos ultimos tiempos, la portabilidad se esta haciendo cada vez mas crucial a la hora de romper
+brechas de accesibilidad a la información. Si bien los dispositivos mobiles, y los servicios en la nube
+estan dominando tales mercados de consumo, no debe olvidarse que estos son en nuestro contexto
+inalcanzables, lo que imperativamente requiere de una solución que pueda adaptarse a las cosas que
+necesitamos y no tenemos.
+
+Dicho en terminos simples, brindar acceso a recursos en linea, es la función prioritaria a tomar en
+cuenta a la hora de poder reducir cualquier diferencia de accesibilidad a la información, y el
+conocimiento entre las personas.
+
+Aun asi, existe un problema emergente adicional, pues que cada dia que pasa, los recursos digitales
+continuan siendo creados, haciendo del conocimiento algo muy dificil de rodear o englobar, por lo que
+inevitablemente los metodos de adquisicion de conocimiento estan condenados a diversificarse.
+
+\section{Definición del Problema}
+Por lo mencionado anteriormente se define el problema como:
+
+El creciente volumen de ficheros de audio, conlleva inexorablemente a una cada vez mayor inversión de
+tiempo a la hora de escudriñar en los recursos de audio disponibles.
+
+\section{Objetivo General}
+Desarrollar un sistema web que permita a un usuario descargar, y reproducir en linea, ficheros en formato
+mp3, de modo tal que pueda conocer y compartir sus preferencias musicales con otros usuarios.
+
+\section{Objetivos Específicos}
+\begin{itemize}
+\item Crear un sistema de clasificación libre de ambiguiedades a la hora de ordenar taxonomicamente los
+componentes de una colección de audio.
+\item Proveer a esta clasificación una interfaz visual enriquecida.
+\item Proveer al sistema de un reproductor en linea.
+\item Desarrollar una funcionalidad para creación de listas de reproducción.
+\end{itemize}
+
+\section{Proceso de desarrollo}
+A continuación se detallan los pasos a seguir:
+
+\begin{enumerate}
+\item Construcción de los modelos necesarios tal que estos puedan albergar la estructura de la
+información que se tiene a disposición.
+\item Creación de la base de datos que pueda albergar la información requerida.
+\item Construcción de las interfaces necesarias para el uso del sistema.
+\item Construcción de los controladores necesarios para la validación y filtrado de la información
+entrante.
+\item Configuración del servidor para el montado de directorios con archivos de audio.
+\item Creación de las interfaces JSON para el intercambio de de información en el sistema (AJAX).
+\item Poner el sitio construido a un servidor en producción (macchiato.scesi.org).
+\end{enumerate}
+
+\section{Herramientas}
+En el axiomático caso de que a alguien le importe lo que estamos haciendo, se utilizaran herramientas
+que faciliten el intercambio de código, e ideas que puedan mejorar la solución propuesta, entre otras
+estas son:
+
+\begin{enumerate}
+\item FOS GNU/Linux: Como parte de la evaluación y a modo de contribución a este proyecto.
+\item Apache2: Para el despliegue del sistema construido.
+\item Git: Como herramienta de versionamiento y a futuro liberar el código del sistema en
+el repositorio de proyectos github (https://github.com/).
+\item NetBeans: Como IDE de desarrollo para PHP5.
+\end{enumerate}
+
+\section{Justificación}
+Para todo aquel que vive de la portabilidad, tener la mayor cantidad de información en la nube, es
+de vital importancia, ya sea como un respaldo de su propia información, o como una forma de fomentar el
+libre intercambio de recursos entre usuarios.
+
+Cabe mencionar que no solo hablamos de musica, sino de cualquier recurso de audio. Un claro ejemplo de
+que estos tipos de recursos pueden contribuir al aprendizaje son los podcasts, y los audiolibros.
+
+\end{document}
