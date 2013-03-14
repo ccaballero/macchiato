@@ -6,5 +6,3 @@ class Genre extends Model
         return $this->name;
     }
 }
-
-?>

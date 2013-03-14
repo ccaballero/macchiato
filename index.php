@@ -23,7 +23,18 @@
     <body>
         <div id="header"></div>
         <div id="wrapper">
-            <div id="content"></div>
+            <div id="content">
+                <?php
+                
+                    $song = new Song();
+                    $song->track = 1;
+                    $song->title = 'asdfasdf';
+                    
+                    echo $song;
+                
+                ?>
+                
+            </div>
             <div id="footer"></div>
         </div>
     </body>
