@@ -1,12 +1,12 @@
 <VirtualHost *:80>
-    ServerName cappuchino.local
+    ServerName macchiato.local
 
-    DocumentRoot /var/www/cappuchino.local
+    DocumentRoot /home/fos/Proyectos/macchiato
 
-    ErrorLog /var/www/cappuchino.local/logs/error.log
-    CustomLog /var/www/cappuchino.local/logs/access.log "%t %a %m %U%q"
+    ErrorLog /home/fos/Proyectos/macchiato/logs/error.log
+    CustomLog /home/fos/Proyectos/macchiato/logs/access.log "%t %a %m %U%q"
 
-    <Directory "/var/www/cappuchino.local/">
+    <Directory "/home/fos/Proyectos/macchiato/">
         DirectoryIndex index.php
         AllowOverride All
         Order allow,deny
