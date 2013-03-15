@@ -35,13 +35,7 @@ function __autoload($class) {
         <div id="wrapper">
             <div id="content">
                 <?php
-                
-                    $song = new Song();
-                    $song->track = 1;
-                    $song->title = 'asdfasdf';
-                    
-                    echo $song;
-                
+                echo '..' . $_GET['page'];
                 ?>
                 
             </div>
