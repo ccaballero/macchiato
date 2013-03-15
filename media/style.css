@@ -1,0 +1,146 @@
+/*
+000000
+333333
+262626
+1A1A1A
+0D0D0D
+*/
+
+@font-face {
+    font-family: 'DesignioRegular';
+    src: url('/media/fonts/DesignioRegular.otf');
+}
+
+@font-face {
+    font-family: 'DesignioMedium';
+    src: url('/media/fonts/DesignioMedium.otf');
+}
+
+@font-face {
+    font-family: 'DesignioBold';
+    src: url('/media/fonts/DesignioBold.otf');
+}
+
+html, body, div {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background: url('/media/183938.png') #ffffff;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+#menubar {
+    width: 100%;
+    float: left;
+}
+
+#menubar ul {
+    list-style: none;
+}
+
+#menubar ul li {
+    float: left;
+}
+
+#menubar ul li a {
+    font-family: 'DesignioBold';
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px 20px;
+    color: #ffffff;
+    text-decoration: none;
+}
+#menubar ul li.selected a,
+#menubar ul li a:hover {
+    color: #F76E2A;
+}
+
+#content {
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    right: 10px;
+    bottom: 70px;
+    overflow: hidden;
+}
+
+#artist {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 250px;
+    border-right: 3px dashed #ffffff;
+}
+
+#album {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 250px;
+    width: 250px;
+    border-right: 3px dashed #ffffff;
+}
+
+#song {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 500px;
+    width: 250px;
+    border-right: 3px dashed #ffffff;
+}
+
+#artist ul,
+#album ul,
+#song ul {
+    margin: 0px;
+    padding: 5px 5px 5px 10px;
+    list-style: none;
+}
+
+#artist ul li,
+#album ul li,
+#song ul li {}
+
+#artist ul li a,
+#album ul li a,
+#song ul li a {
+    font-family: 'DesignioBold';
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#artist ul li a:hover,
+#artist ul li.active a,
+#album ul li a:hover,
+#album ul li.active a,
+#song ul li a:hover,
+#song ul li.active a {
+    color: #F76E2A;
+}
+
+#information {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 760px;
+    right: 0px;
+    background-color: #262626;
+    border-radius: 10px;
+/*000000
+333333
+262626
+1A1A1A
+0D0D0D*/
+}
