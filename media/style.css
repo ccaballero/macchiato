@@ -42,6 +42,15 @@ body {
     clear: both;
 }
 
+a {
+    text-decoration: none;
+}
+
+a:focus {
+    outline: none;
+    border-bottom: 1px dashed #ffffff;
+}
+
 #menubar {
     width: 100%;
     float: left;
@@ -50,6 +59,7 @@ body {
 
 #menubar ul {
     list-style: none;
+    margin-right: 10px;
 }
 
 #menubar ul li {
@@ -62,14 +72,18 @@ body {
     font-weight: bold;
     padding: 5px 20px;
     color: #ffffff;
-    text-decoration: none;
 }
+
+#menubar ul li.active a,
 #menubar ul li.selected a,
 #menubar ul li a:hover {
     color: #F76E2A;
 }
 
-#content {}
+#content {
+    float: left;
+    width: 100%;
+}
 
 #artist {
     float: left;
@@ -92,13 +106,12 @@ body {
 #main {
     float: left;
     width: 50%;
+    min-width: 240px;
 }
 
-#information {
-    background-color: #262626;
-    border-radius: 10px;
-    margin: 5px 10px;
-    padding: 5px 10px;
+.wrapper {
+    width: 100%;
+    border-left: 1px dashed #909090;
 }
 
 #artist ul,
@@ -119,7 +132,6 @@ body {
     font-family: 'DesignioMedium';
     font-size: 14px;
     color: #ffffff;
-    text-decoration: none;
 }
 
 #artist ul li a:hover,
@@ -129,4 +141,35 @@ body {
 #song ul li a:hover,
 #song ul li.active a {
     color: #F76E2A;
+}
+
+#information {
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin: 5px 10px;
+    padding: 10px 10px;
+    min-height: 142px;
+}
+
+#information h1,
+#information h2,
+#information h3 {
+    font-family: Baskerville, Times New Roman, Times, serif;
+    color: #262626;
+    margin: 0px;
+    padding: 0px;
+    display: block;
+}
+
+#information h1 { font-size: 32px; }
+#information h2 { font-size: 22px; }
+#information h3 { font-size: 16px; }
+
+#information .cover {
+    float: right;
+}
+
+#information .cover img {
+    height: 140px;
+    width: auto;
 }
