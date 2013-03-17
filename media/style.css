@@ -21,7 +21,7 @@
     src: url('/media/fonts/DesignioBold.otf');
 }
 
-html, body, div {
+html, body, div, h1, h2, h3, h4, p {
     margin: 0px;
     padding: 0px;
 }
@@ -38,9 +38,14 @@ body {
     float: right;
 }
 
+.clear {
+    clear: both;
+}
+
 #menubar {
     width: 100%;
     float: left;
+    border-bottom: 1px dashed #909090;
 }
 
 #menubar ul {
@@ -64,39 +69,36 @@ body {
     color: #F76E2A;
 }
 
-#content {
-    position: absolute;
-    top: 50px;
-    left: 10px;
-    right: 10px;
-    bottom: 70px;
-    overflow: hidden;
-}
+#content {}
 
 #artist {
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    width: 250px;
-    border-right: 3px dashed #ffffff;
+    float: left;
+    width: 10%;
+    min-width: 120px;
 }
 
 #album {
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    left: 250px;
-    width: 250px;
-    border-right: 3px dashed #ffffff;
+    float: left;
+    width: 20%;
+    min-width: 240px;
 }
 
 #song {
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    left: 500px;
-    width: 250px;
-    border-right: 3px dashed #ffffff;
+    float: left;
+    width: 20%;
+    min-width: 240px;
+}
+
+#main {
+    float: left;
+    width: 50%;
+}
+
+#information {
+    background-color: #262626;
+    border-radius: 10px;
+    margin: 5px 10px;
+    padding: 5px 10px;
 }
 
 #artist ul,
@@ -114,9 +116,8 @@ body {
 #artist ul li a,
 #album ul li a,
 #song ul li a {
-    font-family: 'DesignioBold';
-    font-size: 16px;
-    font-weight: bold;
+    font-family: 'DesignioMedium';
+    font-size: 14px;
     color: #ffffff;
     text-decoration: none;
 }
@@ -128,19 +129,4 @@ body {
 #song ul li a:hover,
 #song ul li.active a {
     color: #F76E2A;
-}
-
-#information {
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    left: 760px;
-    right: 0px;
-    background-color: #262626;
-    border-radius: 10px;
-/*000000
-333333
-262626
-1A1A1A
-0D0D0D*/
 }

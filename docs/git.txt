@@ -26,30 +26,9 @@ clone
     bare (mirror)
     non-bare
 
-
 Protocolos sobre los que trabaja:
     SSH
     GIT
     HTTP
     HTTPS
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    RSYNC
