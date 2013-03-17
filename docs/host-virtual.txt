@@ -1,0 +1,15 @@
+<VirtualHost *:80>
+    ServerName macchiato.local
+
+    DocumentRoot /home/fos/Proyectos/macchiato
+
+    ErrorLog /home/fos/Proyectos/macchiato/logs/error.log
+    CustomLog /home/fos/Proyectos/macchiato/logs/access.log "%t %a %m %U%q"
+
+    <Directory "/home/fos/Proyectos/macchiato/">
+        DirectoryIndex index.php
+        AllowOverride All
+        Order allow,deny
+        Allow from all
+    </Directory>
+</VirtualHost>

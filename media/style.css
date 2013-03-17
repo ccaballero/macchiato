@@ -52,6 +52,7 @@ a:focus {
 }
 
 #menubar {
+    margin: 0px;
     width: 100%;
     float: left;
     border-bottom: 1px dashed #909090;
@@ -81,6 +82,7 @@ a:focus {
 }
 
 #content {
+    margin: 0px;
     float: left;
     width: 100%;
 }
@@ -104,6 +106,7 @@ a:focus {
 }
 
 #main {
+    margin-left: -1px;
     float: left;
     width: 50%;
     min-width: 240px;
@@ -146,9 +149,9 @@ a:focus {
 #information {
     background-color: #ffffff;
     border-radius: 10px;
-    margin: 5px 10px;
+    margin: 10px 10px;
     padding: 10px 10px;
-    min-height: 142px;
+    min-height: 140px;
 }
 
 #information h1,
