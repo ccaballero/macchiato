@@ -1,7 +1,7 @@
 <?php
 
-class Actions_Explorar {
+class Actions_Explorar extends Actions_Abstract {
     public function run() {
-        $view->titulo = 'asdf';
+        $this->view->titulo = 'asdf';
     }
 }

@@ -2,7 +2,7 @@
 
 class Actions_Inicio
 {
-    public function run() {
+    public function run(Views_View $view) {
         
     }
 }

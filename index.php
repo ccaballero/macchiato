@@ -24,16 +24,16 @@ $accepted_requests = array(
     'acceder' => 'Actions_Acceder',
 );
 
+// view
+$view = new Views_View();
+
 $request = $_GET['page'];
 if (array_key_exists($request, $accepted_requests)) {
-    $controller = new $accepted_requests[$request]();
+    $controller = new $accepted_requests[$request]($view);
     $controller->run();
 } else {
     header('HTTP/1.0 404 Not Found');
 }
-
-// view
-$view = new Views_View();
 
 echo file_get_contents(APPLICATION_PATH . '/index.html');
 
