@@ -15,10 +15,11 @@ function __autoload($class) {
 
 // router
 $accepted_requests = array(
-    ''          => 'Actions_Home',
-    'explorer'  => 'Actions_Explorer',
-    'playlists' => 'Actions_Playlists',
-    'login'     => 'Actions_Login',
+    ''           => 'Actions_Home',
+    'collection' => 'Actions_Collection',
+    'explorer'   => 'Actions_Explorer',
+    'playlists'  => 'Actions_Playlists',
+    'login'      => 'Actions_Login',
 );
 
 // view
