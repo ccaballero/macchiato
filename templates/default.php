@@ -32,8 +32,10 @@
         </div>
         <div class="clear"></div>
         <div id="content"><?php echo $this->content() ?></div>
+    <?php if ($this->speakker) { ?>
         <audio class="speakker light">
             <source src="playlist.json" type="application/json"/>
         </audio>
+    <?php } ?>
     </body>
 </html>

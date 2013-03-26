@@ -27,11 +27,11 @@ $view->setLayoutPath(APPLICATION_PATH . '/templates/');
 $view->setLayout('default.php');
 
 $request = $_GET['page'];
+$controller = new Actions_404($view);
+
 if (array_key_exists($request, $accepted_requests)) {
     $controller = new $accepted_requests[$request]($view);
-    $controller->run();
-    echo $controller->getView()->render();
-} else {
-    header('HTTP/1.0 404 Not Found');
-    echo '<h1>404 error</h1>';
 }
+
+$controller->run();
+echo $controller->getView()->render();

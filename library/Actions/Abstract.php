@@ -21,5 +21,6 @@ class Actions_Abstract
         // change the hardcode
         $this->view->title = 'SCESI macchiato';
         $this->view->controller = get_class($this);
+        $this->view->speakker = true;
     }
 }

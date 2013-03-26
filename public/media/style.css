@@ -98,6 +98,12 @@ a:focus {
     width: 100%;
 }
 
+#playlist {
+    float: left;
+    width: 10%;
+    min-width: 120px;
+}
+
 #artist {
     float: left;
     width: 10%;
@@ -128,6 +134,7 @@ a:focus {
     border-left: 1px dashed #909090;
 }
 
+#playlist ul,
 #artist ul,
 #album ul,
 #song ul {
@@ -136,10 +143,12 @@ a:focus {
     list-style: none;
 }
 
+#playlist ul li,
 #artist ul li,
 #album ul li,
 #song ul li {}
 
+#playlist ul li a,
 #artist ul li a,
 #album ul li a,
 #song ul li a {
@@ -148,6 +157,8 @@ a:focus {
     color: #ffffff;
 }
 
+#playlist ul li a:hover,
+#playlist ul li.active a,
 #artist ul li a:hover,
 #artist ul li.active a,
 #album ul li a:hover,
@@ -186,4 +197,66 @@ a:focus {
 #information .cover img {
     height: 140px;
     width: auto;
+}
+
+#central {
+    max-width: 960px;
+    margin: 0px auto;
+    padding-top: 30px;
+}
+
+#central h1 {
+    color: #ffffff;
+    font-family: 'DesignioMedium';
+    font-size: 60px;
+}
+
+#central p {
+    color: #ffffff;
+    font-family: Baskerville, Times New Roman, Times, serif;
+    font-size: 20px;
+}
+
+#login {
+    width: 550px;
+    /*background-color: #F76E2A;*/
+    padding: 20px;
+    margin: 0px auto;
+    margin-top: 60px;
+    background: #ffffff;
+    border-radius: 10px;
+}
+
+#login form label,
+#login form input[type="text"],
+#login form input[type="password"],
+#login form input[type="submit"] {
+    font-family: Baskerville, Times New Roman, Times, serif;
+    font-size: 30px;
+}
+
+#login form p {
+    margin: 10px 0px;
+}
+
+#login form .submit {
+    margin-left: 170px;
+}
+
+#login form p label {
+    float: left;
+    width: 160px;
+    text-align: right;
+    margin-right: 10px;
+    padding: 5px 0px;
+    color: #909090;
+}
+
+#login form p input[type="text"],
+#login form p input[type="password"],
+#login form p input[type="submit"] {
+    border: 1px dashed #909090;
+    background-color: #ffffff;
+    padding: 5px 20px;
+    color: #262626;
 }
