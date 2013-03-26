@@ -1,0 +1,11 @@
+{"playlist":
+    [
+	{
+	    "0": {"src":"music/Muse/2012%20-%20The%202nd%20Law/03%20-%20Panic%20station.mp3", "type":"audio/mp3"},
+	    "config": {
+		"title": "Muse - Panic Station",
+		"poster": "music/Muse/2012 - The 2nd Law/Muse - The 2nd Law - cover.jpg"
+	    }
+	}
+    ]
+}
