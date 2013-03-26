@@ -260,3 +260,36 @@ a:focus {
     padding: 5px 20px;
     color: #262626;
 }
+
+#autoindex {
+    max-width: 960px;
+    margin: 0px auto;
+}
+
+#autoindex table {
+    width: 100%;
+}
+
+#autoindex table tr th,
+#autoindex table tr th a,
+#autoindex table tr td,
+#autoindex table tr td a {
+    font-family: 'DesignioMedium';
+    font-size: 15px;
+}
+
+#autoindex table tr th,
+#autoindex table tr th a {
+    color: #909090;
+}
+
+#autoindex table tr td,
+#autoindex table tr td a {
+    color: #ffffff;
+}
+
+#autoindex table tr th a:hover,
+#autoindex table tr td a:hover {
+    color: #F76E2A;
+}
+
