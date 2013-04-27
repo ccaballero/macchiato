@@ -1,10 +1,8 @@
 <div id="artist">
     <ul>
-        <li class="active"><a href="">Arctic Monkeys</a></li>
-        <li><a href="">Incubus</a></li>
-        <li><a href="">Muse</a></li>
-        <li><a href="">Queens of the Stone Age</a></li>
-        <li><a href="">The Strokes</a></li>
+    <?php foreach ($this->list_artist as $artist) { ?>
+        <li><a href=""><?php echo $artist['file'] ?></a></li>
+    <?php } ?>
     </ul>
 </div>
 <div id="album">

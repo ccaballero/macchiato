@@ -22,5 +22,9 @@ class Actions_Abstract
         $this->view->title = 'SCESI macchiato';
         $this->view->controller = get_class($this);
         $this->view->speakker = true;
+        $this->view->collection = array(
+            '/media/music',
+            '/media/soundtracks',
+        );
     }
 }

@@ -1,11 +1,8 @@
 <?php
 
-$media = '/media/music';
-$extension = 'mp3';
-
-class DirectoryScanner
+class Utils_Scanner
 {
-    public function scan_files($directory, $extension, $recursive = false) {
+    public static function scanner($directory, $extension, $recursive = false) {
         $files = array();
 
         $subdirectories = @scandir($directory);
@@ -37,6 +34,3 @@ class DirectoryScanner
         return $files;
     }
 }
-
-$dr = new DirectoryScanner();
-var_dump($dr->scan_files($media, $extension, true));
