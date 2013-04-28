@@ -4,11 +4,15 @@ $(document).ready(function(){
 
     $('a').click(function(event) {
         window.history.pushState('', '', event.target);
-        
+
         $('#menubar li.active').removeClass('active');
         $(this).parent().addClass('active');
 
-        $('#content').html('asdf');
+        page = window.location.pathname.substr(1);
+        if (page === '') page = 'home';
+        $.get('/index.php?page='+page+'&type=ajax', function(data) {
+            $('#content').html(data);
+        });
 
         return false;
     });

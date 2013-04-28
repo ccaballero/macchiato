@@ -96,6 +96,7 @@ a:focus {
     margin: 0px;
     float: left;
     width: 100%;
+    min-width: 760px;
     padding-bottom: 75px;
 }
 
@@ -220,7 +221,6 @@ a:focus {
 
 #login {
     width: 550px;
-    /*background-color: #F76E2A;*/
     padding: 20px;
     margin: 0px auto;
     margin-top: 60px;
@@ -233,7 +233,7 @@ a:focus {
 #login form input[type="password"],
 #login form input[type="submit"] {
     font-family: Baskerville, Times New Roman, Times, serif;
-    font-size: 30px;
+    font-size: 32px;
 }
 
 #login form p {
@@ -250,16 +250,21 @@ a:focus {
     text-align: right;
     margin-right: 10px;
     padding: 5px 0px;
-    color: #909090;
+    color: #a0a0a0;
+}
+
+#login form p input[type="text"],
+#login form p input[type="password"] {
+    width: 330px;
 }
 
 #login form p input[type="text"],
 #login form p input[type="password"],
 #login form p input[type="submit"] {
-    border: 1px dashed #909090;
+    border: 2px dashed #a0a0a0;
     background-color: #ffffff;
     padding: 5px 20px;
-    color: #262626;
+    color: #a0a0a0;
 }
 
 #autoindex {

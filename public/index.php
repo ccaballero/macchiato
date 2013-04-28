@@ -16,6 +16,7 @@ function __autoload($class) {
 // router
 $accepted_requests = array(
     ''           => 'Actions_Home',
+    'home'       => 'Actions_Home',
     'collection' => 'Actions_Collection',
     'explorer'   => 'Actions_Explorer',
     'playlists'  => 'Actions_Playlists',
@@ -25,13 +26,19 @@ $accepted_requests = array(
 // view
 $view = new Views_View();
 $view->setLayoutPath(APPLICATION_PATH . '/templates/');
-$view->setLayout('default.php');
 
-$request = $_GET['page'];
+if (isset($_GET['type']) && $_GET['type'] == 'ajax') {
+    $view->setLayout('ajax.php');
+} else {
+    $view->setLayout('default.php');
+}
+
 $controller = new Actions_404($view);
-
-if (array_key_exists($request, $accepted_requests)) {
-    $controller = new $accepted_requests[$request]($view);
+if (isset($_GET['page'])) {
+    $request = $_GET['page'];
+    if (array_key_exists($request, $accepted_requests)) {
+        $controller = new $accepted_requests[$request]($view);
+    }
 }
 
 $controller->run();
