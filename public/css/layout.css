@@ -1,0 +1,103 @@
+/*
+000000
+333333
+262626
+1A1A1A
+0D0D0D
+
+F76E2A
+*/
+
+@font-face {
+    font-family: 'DesignioRegular';
+    src: url('/fonts/DesignioRegular.otf');
+}
+
+@font-face {
+    font-family: 'DesignioMedium';
+    src: url('/fonts/DesignioMedium.otf');
+}
+
+@font-face {
+    font-family: 'DesignioBold';
+    src: url('/fonts/DesignioBold.otf');
+}
+
+html, body, div, h1, h2, h3, h4, p {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background: url('/img/183938.png') #ffffff;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:focus {
+    outline: none;
+    border-bottom: 1px dashed #ffffff;
+}
+
+#menubar {
+    margin: 0px;
+    width: 100%;
+    float: left;
+    position: relative;
+    border-bottom: 1px dashed #909090;
+}
+
+#menubar .background {
+    float: left;
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: -moz-linear-gradient(center top , #000000, #1A1A1A) repeat scroll 0 0 transparent;
+    opacity: 0.75;
+}
+
+#menubar ul {
+    list-style: none;
+    margin-right: 10px;
+}
+
+#menubar ul li {
+    float: left;
+}
+
+#menubar ul li a {
+    font-family: 'DesignioBold';
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px 20px;
+    color: #ffffff;
+}
+
+#menubar ul li.active a,
+#menubar ul li.selected a,
+#menubar ul li a:hover {
+    color: #F76E2A;
+}
+
+#content {
+    margin: 0px;
+    float: left;
+    width: 100%;
+    min-width: 760px;
+    padding-bottom: 75px;
+}

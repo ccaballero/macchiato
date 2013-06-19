@@ -1,7 +1,25 @@
-
 /*============================================================================*/
 /* Tablas necesarias para la categorización de las materias                   */
 /*============================================================================*/
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE `user` (
+    `ident`       int unsigned NOT NULL auto_increment,
+    `username`    varchar(64) NOT NULL,
+    `password`    varchar(64) NOT NULL,
+    PRIMARY KEY (`ident`)
+) DEFAULT CHARACTER SET UTF8;
+
+DROP TABLE IF EXISTS `collection`;
+CREATE TABLE `collection` (
+    `ident`       int unsigned  NOT NULL auto_increment,
+    `name`        varchar(128)  NOT NULL,
+    `user`        int unsigned NOT NULL,
+    PRIMARY KEY (`ident`),
+    INDEX (`user`),
+    FOREIGN KEY (`user`)
+    REFERENCES `user`(`ident`) ON UPDATE CASCADE ON DELETE RESTRICT
+) DEFAULT CHARACTER SET UTF8;
+
 DROP TABLE IF EXISTS `artist`;
 CREATE TABLE `artist` (
     `ident`       int unsigned NOT NULL auto_increment,
@@ -24,9 +42,11 @@ CREATE TABLE `artist_album` (
     `album`       int unsigned NOT NULL,
     PRIMARY KEY (`artist`, `album`),
     INDEX (`artist`),
-    FOREIGN KEY (`artist`) REFERENCES `artist`(`ident`) ON UPDATE CASCADE ON DELETE RESTRICT,
+    FOREIGN KEY (`artist`)
+    REFERENCES `artist`(`ident`) ON UPDATE CASCADE ON DELETE RESTRICT,
     INDEX (`album`),
-    FOREIGN KEY (`album`) REFERENCES `album`(`ident`) ON UPDATE CASCADE ON DELETE RESTRICT
+    FOREIGN KEY (`album`)
+    REFERENCES `album`(`ident`) ON UPDATE CASCADE ON DELETE RESTRICT
 ) DEFAULT CHARACTER SET UTF8;
 
 DROP TABLE IF EXISTS `genre`;
@@ -46,17 +66,11 @@ CREATE TABLE `song` (
     `duration`    int unsigned NULL,
     PRIMARY KEY (`ident`, `album`),
     INDEX (`album`),
-    FOREIGN KEY (`album`) REFERENCES `album`(`ident`) ON UPDATE CASCADE ON DELETE RESTRICT,
+    FOREIGN KEY (`album`)
+    REFERENCES `album`(`ident`) ON UPDATE CASCADE ON DELETE RESTRICT,
     INDEX (`genre`),
-    FOREIGN KEY (`genre`) REFERENCES `genre`(`ident`) ON UPDATE CASCADE ON DELETE RESTRICT
-) DEFAULT CHARACTER SET UTF8;
-
-DROP TABLE IF EXISTS `user`;
-CREATE TABLE `user` (
-    `ident`       int unsigned NOT NULL auto_increment,
-    `username`    varchar(64) NOT NULL,
-    `password`    varchar(64) NOT NULL,
-    PRIMARY KEY (`ident`)
+    FOREIGN KEY (`genre`)
+    REFERENCES `genre`(`ident`) ON UPDATE CASCADE ON DELETE RESTRICT
 ) DEFAULT CHARACTER SET UTF8;
 
 DROP TABLE IF EXISTS `playlist`;
@@ -67,7 +81,8 @@ CREATE TABLE `playlist` (
     `tsregister`  int unsigned NOT NULL,
     PRIMARY KEY (`ident`),
     INDEX (`author`),
-    FOREIGN KEY (`author`) REFERENCES `user`(`ident`) ON UPDATE CASCADE ON DELETE RESTRICT
+    FOREIGN KEY (`author`)
+    REFERENCES `user`(`ident`) ON UPDATE CASCADE ON DELETE RESTRICT
 ) DEFAULT CHARACTER SET UTF8;
 
 DROP TABLE IF EXISTS `playlist_song`;
@@ -77,9 +92,11 @@ CREATE TABLE `playlist_song` (
     `song`        int unsigned NOT NULL,
     PRIMARY KEY (`playlist`, `album`, `song`),
     INDEX (`playlist`),
-    FOREIGN KEY (`playlist`) REFERENCES `playlist`(`ident`) ON UPDATE CASCADE ON DELETE RESTRICT,
+    FOREIGN KEY (`playlist`)
+    REFERENCES `playlist`(`ident`) ON UPDATE CASCADE ON DELETE RESTRICT,
     INDEX (`album`, `song`),
-    FOREIGN KEY (`album`, `song`) REFERENCES `song`(`album`, `ident`) ON UPDATE CASCADE ON DELETE RESTRICT
+    FOREIGN KEY (`album`, `song`)
+    REFERENCES `song`(`album`, `ident`) ON UPDATE CASCADE ON DELETE RESTRICT
 ) DEFAULT CHARACTER SET UTF8;
 
 DROP TABLE IF EXISTS `user_playlist`;
@@ -89,7 +106,9 @@ CREATE TABLE `user_playlist` (
     `type`        enum('viewer', 'editor') NOT NULL DEFAULT 'viewer',
     PRIMARY KEY (`playlist`, `user`),
     INDEX (`playlist`),
-    FOREIGN KEY (`playlist`) REFERENCES `playlist`(`ident`) ON UPDATE CASCADE ON DELETE RESTRICT,
+    FOREIGN KEY (`playlist`)
+    REFERENCES `playlist`(`ident`) ON UPDATE CASCADE ON DELETE RESTRICT,
     INDEX (`user`),
-    FOREIGN KEY (`user`) REFERENCES `user`(`ident`) ON UPDATE CASCADE ON DELETE RESTRICT
+    FOREIGN KEY (`user`)
+    REFERENCES `user`(`ident`) ON UPDATE CASCADE ON DELETE RESTRICT
 ) DEFAULT CHARACTER SET UTF8;

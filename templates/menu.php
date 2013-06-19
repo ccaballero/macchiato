@@ -3,7 +3,7 @@
 </ul>
 <ul class="left">
     <li><a href="/">Inicio</a></li>
-    <li><a href="/collection">Colección</a></li>
+    <li><a href="/collection">Colecciones</a></li>
     <li><a href="/explorer">Explorar</a></li>
     <li><a href="/playlists">Listas</a></li>
 </ul>

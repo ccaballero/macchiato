@@ -1,8 +1,12 @@
 <div id="login">
-    <form accept-charset="utf-8" action="" method="post">
-        <p><label>Usuario: </label><input class="focus" type="text" value="" name="username"></p>
-        <p><label>Contraseña: </label><input type="password" value="" name="password"></p>
-        <p class="submit"><input type="submit" value="Acceder"></p>
+    <form method="post">
+        <h1>Acceder</h1>
+        <span></span>
+        <div class="input">
+            <input class="focus username" type="text" name="username" />
+        </div>
     </form>
 </div>
+
 <script type="text/javascript">$(document).ready(function(){$('.focus').focus();});</script>
+<link media="screen" rel="stylesheet" type="text/css" href="/css/login.css" />

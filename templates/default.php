@@ -17,13 +17,13 @@
         <meta name="revisit" content="1 days" />
         <meta name="title" content="scesi macchiato" />
 
-        <link href="/media/cup.png" rel="icon" type="image/png" />
-        <link media="screen" rel="stylesheet" type="text/css" href="/media/style.css" />
+        <link href="/famfamfam/cup.png" rel="icon" type="image/png" />
+        <link media="screen" rel="stylesheet" type="text/css" href="/css/layout.css" />
 
-	<script type="text/javascript" src="/media/jquery-1.6.2.min.js"></script>
-	<script type="text/javascript" src="/media/speakker-big-1.2.20r194.min.js"></script>
+	<script type="text/javascript" src="/js/jquery-1.6.2.min.js"></script>
+	<script type="text/javascript" src="/js/speakker-big-1.2.20r194.min.js"></script>
         <script type="text/javascript">$(document).ready(function() {projekktor('.speakker');});</script>
-	<script type="text/javascript" src="/media/macchiato.js"></script>
+	<script type="text/javascript" src="/js/macchiato.js"></script>
     </head>
     <body>
         <div id="menubar">
